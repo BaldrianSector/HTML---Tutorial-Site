@@ -1,4 +1,4 @@
-# HTML - Tutorial-Site
+Tutorial-Site
 
 This site was published as an asignment for the Danish School of Media and Journalism (DMJX) at Coded Design.
 
