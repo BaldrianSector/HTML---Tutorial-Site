@@ -1,0 +1,213 @@
+/* Basic b&w */
+
+canvas{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* Selection color */
+
+/* Text selection color for modern browsers */
+::selection {
+    background-color: white; /* Example highlight color */
+    color: #0a0a0a; /* Example text color */
+}
+
+/* Text selection color for Firefox */
+::-moz-selection {
+    background-color: white; /* Example highlight color */
+    color: #0a0a0a; /* Example text color */
+}
+html {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+h1 {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change 'center' to 'flex-start' to push the content higher */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: url('cursor.png'), auto;
+    cursor: none;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Show on hover */
+
+.hidden:hover:after{
+    font-weight: bold;
+    color: #0a0a0a;
+    background-color: white;
+    content:'FLEX 💪🏻';
+}
+
+.hidden:after{
+    content:'SHOW 🙋🏻‍♂️';
+    font-weight: bold;
+    color: #0a0a0a;
+    background-color: white;
+}
+
+/* Typewriter effect */
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+/* Custom cursor */
+
+.custom-cursor {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    width: 248px; /* Adjust width as needed */
+    height: 280px; /* Adjust height as needed */
+    background: url('cursor.png') no-repeat;
+    pointer-events: none; /* Ensures cursor doesn't interfere with element interactions */
+    opacity: 1; /* Hide cursor initially */
+    z-index: 9999; /* Ensure cursor is above other elements */
+    transform: translate(-6px, -23px) scale(0.2); /* Apply translation offset and scaling */
+    transform-origin: top left; 
+}
+
+/* Center elements */
+
+body, html {
+    height: 80%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Input button from Scimba */
+
+input {
+    width: 412px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0px solid #ffffff;
+    margin-bottom: 4px;
+}
+
+button {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: 1px solid #0a0a0a;
+    font-weight: bold;
+}
+
+#delete-btn {
+    background: white;
+    color: #0a0a0a;
+}
+
+/* links */
+
+a {
+    color: white;
+    font-weight: bold
+  }
+
+ul {
+    list-style-type: none
+}
+
+em {
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0a0a0a;
+}
+
+/* Shake effect on .shake-effect */
+
+.shake-effect {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-size: 120% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, 
+                      #7794ff, 
+                      #44107A,
+                      #FF1361,
+                      #FFF800);
+    animation: .8s shake infinite alternate;
+  }
+  
+  @keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }
+  
+strong::selection {
+background-color: white; /* Change the background color */
+-webkit-text-fill-color: #0a0a0a; /* Change the text color */
+text-shadow: none; /* Remove text shadow if applied */
+}
+
+/* Scrolable div */
+
+.scrollable-div {
+    height: 180px; /* Set the maximum height for the scrollable div */
+    width: 412px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for styling */
+    box-sizing: border-box;
+    margin: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* placeholder */
+
+input::placeholder {
+    font-weight: bold;
+}
