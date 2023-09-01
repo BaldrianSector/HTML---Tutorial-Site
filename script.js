@@ -84,7 +84,7 @@ function renderList(bulletPoints) {
         `;
     }
     // Update the HTML content of the unordered list with the generated list items
-    ulEl.innerHTML = listItems;
+    ulEl.innerHTML = "Hej";
 }
 
 // Event listener for the "Delete" button (double click)
